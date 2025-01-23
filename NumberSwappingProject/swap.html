@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kgositsile Sitase</title>
+</head>
+<body>
+    <script>
+    // Ask the user to enter a number of at least 3 digits
+    let userInput = prompt("Enter a number of at least 3 digits:");
+
+    // Check if the entered value is a number and has at least 3 digits
+    if (typeof userInput !== 'number' && userInput.length >= 3) {
+        // Convert the input to a string
+        let numberString = userInput.toString();
+
+        // Use a for loop to swap the second and last digits
+        let swappedNumber = '';
+        for (let i = 0; i < numberString.length; i++) {
+            if (i === 1) {
+                // If it's the second digit, append the last digit
+                swappedNumber += numberString[numberString.length - 1];
+            } else if (i === numberString.length - 1) {
+                // If it's the last digit, append the second digit
+                swappedNumber += numberString[1];
+            } else {
+                // Otherwise, keep the digit as it is
+                swappedNumber += numberString[i];
+            }
+        }
+
+        // Convert the string back to a number
+        let result = parseInt(swappedNumber);
+
+        // Display the original and swapped numbers
+        alert("Original Number: " + userInput + "\nSwapped Number: " + result);
+    } else {
+        // Display an error message if the input is not valid
+        alert("Please enter a valid number of at least 3 digits.");
+    }
+    </script>
+    <script type="text/javascript" src="swapping.js"></script>
+</body>
+</html>

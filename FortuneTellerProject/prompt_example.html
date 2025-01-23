@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kgositsile Sitase</title>
+</head>
+<body> 
+    <script type='text/javascript' src="fortuneTeller.js"></script>
+    <script>
+        // Mother's name variable
+        let momName = prompt("What is your mother's name?");
+
+        // Street name variable
+        let streetName = prompt("What is the name of the street you grew up on?");
+
+        // Favourite colour variable
+        let favouriteColour = prompt("What was your favourite colour as a child?");
+
+        // Age variable
+        let age = Number(prompt("How old are you?"));
+
+        // Random number variable
+        let randomNumber = Number(prompt("Choose a number between 1 and 10??"));
+
+        console.log(`In ${randomNumber} years you are going to meet your best friend named ${momName} ${streetName}. You will get married in ${age + randomNumber} years and have ${age % randomNumber} children. In ${Math.round(age / randomNumber)} years you are going to dye your hair ${favouriteColour}.`);
+    </script>
+</body>
+</html>
